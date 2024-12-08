@@ -1,1 +1,1 @@
-# kartka-z-zyczneiami
+# kartka-z-zyczeniami
