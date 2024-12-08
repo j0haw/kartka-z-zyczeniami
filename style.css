@@ -8,7 +8,7 @@ body {
   background-color: #fdbf00;
 }
 .card {
-  width: 50vw;
+  width: 80vw;
   height: 50vh;
   position: absolute;
   margin: auto;
@@ -18,13 +18,13 @@ body {
   bottom: 0;
   -webkit-perspective: 100vw;
   perspective: 100vw;
-  transition: 1s;
+  transition: 0.5s;
 }
 .card:hover {
-  transform: rotate(-5deg);
+  transform: rotate(-3deg);
 }
 .card:hover .outside {
-  transform: rotateY(-130deg);
+  transform: rotateY(-150deg);
 }
 .outside,
 .inside {
@@ -128,7 +128,7 @@ body {
   left: -1px;
 }
 .outside p {
-  font-size: 23px;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin-top: 30px;
   text-align: center;
