@@ -8,8 +8,8 @@ body {
   background-color: #fdbf00;
 }
 .card {
-  width: 50vw;
-  height: 50vh;
+  width: 640px;
+  height: 400px;
   position: absolute;
   margin: auto;
   left: 0;
