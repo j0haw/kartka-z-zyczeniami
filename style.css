@@ -52,7 +52,7 @@ body {
   top: 20px;
   left: 0;
   width: 100%;
-  padding: 50px;
+  padding: 10px;
   text-align: center;
   font-weight: bold;
 }
@@ -63,10 +63,10 @@ body {
 }
 
 .textBack {
-  font-size: 1rem;
+  font-size: 9px;
   position: absolute;
-  width: 100%;
-  padding: 10%;
+  width: 90%;
+  padding: medium;
   text-align: center;
 }
 /* Front and Back of the Card */
