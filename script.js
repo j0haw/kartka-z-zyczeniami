@@ -7,7 +7,7 @@ const paper1 = document.querySelector("#p1");
 const paper2 = document.querySelector("#p2");
 const paper3 = document.querySelector("#p3");
 
-// Event Listener
+// Event Listeners
 prevBtn.addEventListener("click", goPrevPage);
 nextBtn.addEventListener("click", goNextPage);
 
@@ -17,19 +17,22 @@ let numOfPapers = 3;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
-  book.style.transform = "translateX(50%)";
-  prevBtn.style.transform = "translateX(-10vw)";
+  book.style.transform = "translateX(0%)";
+  prevBtn.style.opacity = "1"; // Ensure visibility
+  prevBtn.style.pointerEvents = "auto"; // Enable interaction
   nextBtn.style.transform = "translateX(10vw)";
 }
 
 function closeBook(isAtBeginning) {
   if (isAtBeginning) {
     book.style.transform = "translateX(0%)";
+    prevBtn.style.opacity = "0"; // Hide button
+    prevBtn.style.pointerEvents = "none"; // Disable interaction
   } else {
     book.style.transform = "translateX(100%)";
+    prevBtn.style.opacity = "1"; // Show button
+    prevBtn.style.pointerEvents = "auto"; // Enable interaction
   }
-
-  prevBtn.style.transform = "translateX(0px)";
   nextBtn.style.transform = "translateX(0px)";
 }
 
@@ -51,7 +54,7 @@ function goNextPage() {
         closeBook(false);
         break;
       default:
-        throw new Error("unkown state");
+        throw new Error("Unknown state");
     }
     currentLocation++;
   }
@@ -75,9 +78,8 @@ function goPrevPage() {
         paper3.style.zIndex = 1;
         break;
       default:
-        throw new Error("unkown state");
+        throw new Error("Unknown state");
     }
-
     currentLocation--;
   }
 }
