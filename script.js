@@ -80,3 +80,10 @@ card.addEventListener("click", () => {
     startVelocity: 45,
   });
 });
+//instrukcja edycja opacity
+const instarukcja = document.getElementsByClassName("instrukcja")[0];
+
+card.addEventListener("click", () => {
+  instarukcja.style.opacity = "0";
+  instarukcja.style.transition = "opacity 0.5s ease";
+});
