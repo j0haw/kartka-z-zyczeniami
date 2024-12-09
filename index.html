@@ -3,65 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flipbook</title>
+    <title>Flip Card</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Flipbook Container -->
-    <div class="flipbook-container">
-      <!-- Previous Button -->
-      <button id="prev-btn" class="prev-btn">
-        <img src="arrow left.svg" alt="arrow left" />
-      </button>
-
-      <!-- Book -->
-      <div id="book" class="book">
-        <!-- Paper 1 -->
-        <div id="p1" class="paper">
-          <div class="front">
-            <div id="f1" class="front-content">
-              <h1>Front 1</h1>
-            </div>
-          </div>
-          <div class="back">
-            <div id="b1" class="back-content">
-              <h1>Back 1</h1>
-            </div>
-          </div>
+    <div class="card" id="flip-card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h1>Front</h1>
         </div>
-        <!-- Paper 2 -->
-        <div id="p2" class="paper">
-          <div class="front">
-            <div id="f2" class="front-content">
-              <h1>Front 2</h1>
-            </div>
-          </div>
-          <div class="back">
-            <div id="b2" class="back-content">
-              <h1>Back 2</h1>
-            </div>
-          </div>
-        </div>
-        <!-- Paper 3 -->
-        <div id="p3" class="paper">
-          <div class="front">
-            <div id="f3" class="front-content">
-              <h1>Front 3</h1>
-            </div>
-          </div>
-          <div class="back">
-            <div id="b3" class="back-content">
-              <h1>Back 3</h1>
-            </div>
-          </div>
+        <div class="card-back">
+          <h1>Back</h1>
         </div>
       </div>
-
-      <!-- Next Button -->
-      <button id="next-btn" class="next-btn">
-        <img src="arrow.svg" alt="arrow right" />
-      </button>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

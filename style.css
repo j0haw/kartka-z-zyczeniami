@@ -1,123 +1,65 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: sans-serif;
-  background-color: powderblue;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
 }
 
-.flipbook-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px; /* Space between buttons and book */
-}
-
-/* Buttons */
-.prev-btn,
-.next-btn {
-  width: 40px;
-  height: 40px;
-  border: none;
-  background-color: transparent;
+/* Card Container */
+.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
   cursor: pointer;
-  transition: transform 0.5s, opacity 0.5s;
 }
 
-/* Book */
-.book {
+/* Card Inner (flipping mechanism) */
+.card-inner {
+  width: 100%;
+  height: 100%;
   position: relative;
-  width: 80%;
-  max-width: 300px;
-  height: 60%;
-  max-height: 500px;
-  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
 
-.paper {
+/* Front and Back of the Card */
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
-  perspective: 100vw;
-}
-
-.front,
-.back {
-  background-color: white;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  transform-origin: left;
-  transition: transform 0.5s;
-}
-
-.front {
-  z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid powderblue;
-}
-
-.back {
-  z-index: 0;
-}
-
-.front-content,
-.back-content {
-  width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.back-content {
+/* Front Side */
+.card-front {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+/* Back Side */
+.card-back {
+  background-color: #4caf50;
+  color: white;
   transform: rotateY(180deg);
 }
 
-/* Paper flip effect */
-.flipped .front,
-.flipped .back {
-  transform: rotateY(-180deg);
-}
-
-/* Paper stack order */
-#p1 {
-  z-index: 3;
-}
-
-#p2 {
-  z-index: 2;
-}
-
-#p3 {
-  z-index: 1;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .book {
-    width: 90%;
-    height: 70%;
-  }
-}
-
-@media (max-width: 480px) {
-  .book {
-    width: 100%;
-    height: 80%;
-  }
+/* Flipped Class */
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
 }
