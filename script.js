@@ -18,8 +18,8 @@ let maxLocation = numOfPapers + 1;
 
 function openBook() {
   book.style.transform = "translateX(50%)";
-  prevBtn.style.transform = "translateX(-180px)";
-  nextBtn.style.transform = "translateX(180px)";
+  prevBtn.style.transform = "translateX(-10vw)";
+  nextBtn.style.transform = "translateX(10vw)";
 }
 
 function closeBook(isAtBeginning) {
@@ -70,10 +70,10 @@ function goPrevPage() {
         paper2.style.zIndex = 2;
         break;
       case 4:
-          openBook();
-          paper3.classList.remove("flipped");
-          paper3.style.zIndex = 1;
-          break;
+        openBook();
+        paper3.classList.remove("flipped");
+        paper3.style.zIndex = 1;
+        break;
       default:
         throw new Error("unkown state");
     }
