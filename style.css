@@ -5,6 +5,7 @@
 }
 
 body {
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -17,7 +18,7 @@ body {
 /* Book */
 .book {
   position: relative;
-  width: 350px;
+  width: 300px;
   height: 500px;
   transition: transform 0.5s;
 }
@@ -75,7 +76,7 @@ body {
 /* Controller Buttons */
 
 .prev-btn {
-  width: 50px;
+  width: 40px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -84,7 +85,7 @@ body {
 }
 
 .next-btn {
-  width: 50px;
+  width: 40px;
   border: none;
   background-color: transparent;
   cursor: pointer;
