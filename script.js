@@ -76,7 +76,7 @@ card.addEventListener("click", () => {
     scalar: 1.2,
   });
 
-  fire(02, {
+  fire(0.3, {
     spread: 120,
     startVelocity: 45,
   });
@@ -101,6 +101,14 @@ const colors = ["ffc866", "f24c70", "ff6000", "FF747ef7CA6C", "747ef7"];
     angle: 120,
     spread: 55,
     origin: { x: 1 },
+    colors: colors,
+  });
+
+  confetti({
+    particleCount: 4,
+    angle: 90,
+    spread: 55,
+    origin: { y: 1 },
     colors: colors,
   });
 
