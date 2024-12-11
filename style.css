@@ -22,8 +22,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 435px;
-  height: 600px;
+  width: 360px;
+  height: 500px;
   perspective: 1000px;
   cursor: pointer;
   margin: 0 auto;
@@ -48,7 +48,7 @@ body {
 }
 
 .textBack {
-  font-size: 14px;
+  font-size: 12px;
   position: absolute;
   width: 100%;
   padding: 16%;
@@ -64,7 +64,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Front Side */
@@ -80,7 +80,7 @@ body {
 
 /* Back Side */
 .card-back {
-  background: url(back-02.svg);
+  background: url(kartka\ 2.svg);
   color: rgb(0, 0, 0);
   transform: rotateY(180deg);
 }

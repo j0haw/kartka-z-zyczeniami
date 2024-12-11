@@ -6,16 +6,17 @@ card.addEventListener("click", () => {
   card.classList.toggle("flipped");
 });
 
-//confetti
+//confetti z góry
 
 const defaults = {
+  origin: { y: 0 },
   spread: 360,
   ticks: 50,
-  gravity: 0,
-  decay: 0.94,
-  startVelocity: 30,
+  gravity: 2,
+  decay: 0.92,
+  startVelocity: 40,
   shapes: ["star"],
-  colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+  colors: ["ffc866", "f24c70", "ff6000", "FF747ef7CA6C", "747ef7"],
 };
 
 function shoot() {
@@ -75,15 +76,35 @@ card.addEventListener("click", () => {
     scalar: 1.2,
   });
 
-  fire(0.1, {
+  fire(02, {
     spread: 120,
     startVelocity: 45,
   });
 });
-//instrukcja edycja opacity
-const instarukcja = document.getElementsByClassName("instrukcja")[0];
+const end = Date.now() + 2 * 360;
 
-card.addEventListener("click", () => {
-  instarukcja.style.opacity = "0";
-  instarukcja.style.transition = "opacity 0.5s ease";
-});
+//te z boku
+
+const colors = ["ffc866", "f24c70", "ff6000", "FF747ef7CA6C", "747ef7"];
+
+(function frame() {
+  confetti({
+    particleCount: 4,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 },
+    colors: colors,
+  });
+
+  confetti({
+    particleCount: 4,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 },
+    colors: colors,
+  });
+
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+})();
