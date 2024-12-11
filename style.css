@@ -22,8 +22,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 360px;
-  height: 500px;
+  width: 288px;
+  height: 400px;
   perspective: 1000px;
   cursor: pointer;
   margin: 0 auto;
@@ -47,7 +47,7 @@ body {
 }
 
 .textBack {
-  font-size: 12px;
+  font-size: 10px;
   position: absolute;
   width: 100%;
   padding: 16%;
