@@ -8,15 +8,12 @@ function adjustCardSize() {
   const textBack = document.querySelector(".textBack");
 
   if (window.matchMedia("(orientation: landscape)").matches) {
+    textBack.style.fontSize = "1rem";
     card.style.width = "576px";
     card.style.height = "800px";
   } else {
     card.style.width = "288px";
     card.style.height = "400px";
-  }
-
-  if (textBack) {
-    textBack.style.fontSize = "1rem";
   }
 }
 
