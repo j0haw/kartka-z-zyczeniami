@@ -1,26 +1,23 @@
+function adjustCardSize() {
+  const card = document.querySelector(".card");
+  const textBack = document.querySelector(".textBack");
+
+  if (window.matchMedia("(orientation: landscape)").matches) {
+    textBack.style.fontSize = "18px";
+    card.style.width = "576px";
+    card.style.height = "800px";
+  } else {
+    card.style.width = "288px";
+    card.style.height = "400px";
+  }
+}
 window.addEventListener("load", adjustCardSize);
+
 window.addEventListener("resize", adjustCardSize);
+
 const card = document.getElementById("flip-card");
 
-//doapsowanie jak na pc to większy font i rozmiar x2
-// Pierdoli się font
-
-// function adjustCardSize() {
-//   const card = document.querySelector(".card");
-//   const textBack = document.querySelector(".textBack");
-
-//   if (window.matchMedia("(orientation: horizontal)").matches) {
-//     card.style.width = "576px";
-//     card.style.height = "800px";
-//     textBack.style.fontSize = "1rem";
-
-//   } else {
-//     card.style.width = "288px";
-//     card.style.height = "400px";
-//   }
-// }
-
-//obracanie karty
+// Add click event listener
 card.addEventListener("click", () => {
   card.classList.toggle("flipped");
 });
