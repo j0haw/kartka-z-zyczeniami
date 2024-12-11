@@ -43,7 +43,6 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -69,7 +68,6 @@ body {
 
 /* Front Side */
 .card-front {
-  background-color: #ff6b6b;
   color: rgb(0, 0, 0);
 }
 
@@ -81,7 +79,6 @@ body {
 /* Back Side */
 .card-back {
   background: url(kartka\ 2.svg);
-  color: rgb(0, 0, 0);
   transform: rotateY(180deg);
 }
 
